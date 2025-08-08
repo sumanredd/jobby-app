@@ -1,0 +1,221 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.NavBar {
+  background-color: #272727;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeLogo {
+  height: 40px;
+  width: 120px;
+  margin-left: 30px;
+}
+.navUl {
+  display: flex;
+  list-style-type: none;
+}
+.li {
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.li:hover {
+  color: #4f46e5;
+}
+.homeLogoutBtn {
+  height: 30px;
+  width: 80px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  cursor: pointer;
+  margin-right: 30px;
+}
+.homeLogoutBtn:hover {
+  background-color: #423bbc;
+}
+/* .......................................................................................................................... NAV DOWN(HOME) */
+.homeBg {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-top: 90px;
+}
+
+.homeHeading {
+  margin: 0;
+  color: white;
+  font-family: 'Roboto';
+  font-size: 60px;
+}
+.homePara {
+  color: #f8fafc;
+  font-family: 'Roboto';
+  font-size: 19px;
+  font-weight: none;
+}
+.findjobsBtn {
+  height: 40px;
+  margin-top: 30px;
+  width: 100px;
+  font-size: 15px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  cursor: pointer;
+  margin-right: 20px;
+}
+.findjobsBtn:hover {
+  background-color: #423bbc;
+}
+
+@media screen and (max-width: 576px) {
+  .NavBar {
+    background-color: #272727;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .homeLogo {
+    height: 28px;
+    width: 85px;
+    margin-left: 10px;
+  }
+  .homeBg {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding-left: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 50px;
+  }
+  .homeHeading {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 33px;
+  }
+  .homePara {
+    color: #f8fafc;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: none;
+  }
+  .findjobsBtn {
+    width: 90px;
+    height: 35px;
+  }
+  .navUl {
+    display: flex;
+    list-style-type: none;
+  }
+  .li {
+    color: white;
+    padding: 11px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .homeLogoutBtn {
+    height: 23px;
+    font-size: 12px;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .homeBg {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100dvh - 80px);
+    width: 100vw;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    padding-top: 90px;
+    overflow: auto;
+  }
+  .NavBar {
+    background-color: #272727;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .homeHeading {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto';
+    font-size: 38px;
+  }
+  .homePara {
+    color: #f8fafc;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: none;
+  }
+      .findjobsBtn {
+    width: 90px;
+    height: 35px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .NavBar {
+    background-color: #272727;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape){
+  .homeBg {
+  overflow: auto;
+  /* height: calc(100dvh - 80px); */
+}
+  .NavBar {
+    background-color: #272727;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+    .findjobsBtn {
+    width: 90px;
+    height: 35px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,13 @@
+.notFoundBg {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.NotFounfImg{
+  height: 200px;
+  width: 250px;
+}

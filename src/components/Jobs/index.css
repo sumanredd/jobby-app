@@ -1,0 +1,322 @@
+.jobPageBg {
+  background-color: #000000;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 70px;
+}
+.profileBg {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  height: 195px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+.profileHeading {
+  margin: 0px;
+  font-size: 17px;
+  color: #6366f1;
+  font-family: 'Roboto';
+}
+.profilePara {
+  color: #2c364c;
+  font-size: 11px;
+  font-family: 'Roboto';
+}
+.profileImg {
+  height: 60px;
+  width: 60px;
+}
+.ProfileListHeading {
+  font-size: 12px;
+  color: white;
+  font-family: 'Roboto';
+  margin: 0;
+  padding-top: 13px;
+  white-space: nowrap;
+  padding-bottom: 15px;
+}
+.ProfileListUl {
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ProfileListLi {
+  font-size: 13px;
+  font-family: 'Roboto';
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.ProfileLabel {
+  padding-left: 5px;
+  padding-top: 0.5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.ProfileLabel1 {
+  padding-left: 5px;
+  padding-top: 2.5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.ProfileSection {
+  flex-shrink: 0;
+  width: 250px;
+  margin-top: 10px;
+}
+.searchJob {
+  width: 340px;
+  height: 35px;
+  /* margin-left: 110px; */
+  background-color: transparent;
+  border: 1px solid #7e858e;
+  color: white;
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.searchJob:hover {
+  outline: none;
+  border: 1px solid #7e858e;
+}
+.searchIconStyle {
+  margin-top: 10px;
+}
+.searchBtnStyle {
+  height: 35px;
+  width: 60px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  font-family: 'Roboto';
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.searchBtnStyle:hover {
+  background-color: #423bbc;
+}
+/* .searchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 70px;
+} */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* always align content to the left */
+  margin-top: 30px;
+  margin-left: 70px; /* same as .jobPageBg left margin for alignment */
+  width: 100%;
+  max-width: 850px;
+  flex-wrap: wrap;
+}
+
+.searchicon {
+  font-size: 20px;
+  padding-top: 3px;
+}
+.noJobFound {
+  height: 280px;
+  width: 330px;
+}
+.noJobFoundFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 200px;
+  align-items: center;
+  min-height: 70vh;
+}
+.noJobPara {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 30px;
+  margin: 0;
+}
+.mobileUl {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.display {
+  display: none;
+}
+.customHr {
+  width: 224px;
+  margin-top: 25px;
+  margin-left: 0;
+  border: 1px solid white;
+}
+.selectStyle {
+  height: 33px;
+  width: 190px;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 600px) {
+  .jobPageBg {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .customHr {
+    width: 224px;
+    margin: 25px auto 0 auto;
+    border: 1px solid white;
+  }
+  .ProfileListHeading {
+    font-size: 14px;
+    color: white;
+    font-family: 'Roboto';
+    margin: 0;
+    padding-top: 13px;
+    white-space: nowrap;
+    padding-bottom: 15px;
+  }
+
+  .display {
+    display: flex;
+  }
+  .display1 {
+    display: none;
+  }
+  .ProfileSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileUl {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+  }
+  .searchContainer {
+    margin-left: 20px; /* less margin for mobile */
+    justify-content: flex-start;
+  }
+  .searchJob {
+    width: 230px;
+    height: 33px;
+    background-color: transparent;
+    border: 1px solid #7e858e;
+    color: white;
+    padding-left: 4px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .searchBtnStyle {
+    height: 33px;
+    width: 40px;
+  }
+  .noJobFound {
+    height: 160px;
+    width: 240px;
+  }
+  .noJobFoundFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .noJobPara {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 23px;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .jobPageBg {
+    margin-left: 40px;
+  }
+  .searchJob {
+    width: 310px;
+    height: 30px;
+    /* margin-left: 110px; */
+    background-color: transparent;
+    border: 1px solid #7e858e;
+    color: white;
+    padding-left: 4px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .searchContainer {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 0 20px;
+    /* margin-left: 110px; */
+  }
+  .ProfileSection {
+    margin-top: 10px;
+  }
+  .searchBtnStyle {
+    height: 30px;
+    width: 60px;
+  }
+  .ProfileListLi {
+    font-size: 13px;
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  .jobPageBg {
+    margin-left: 20px;
+  }
+  .searchJob {
+    width: 310px;
+    height: 30px;
+    /* margin-left: 20px; */
+    background-color: transparent;
+    border: 1px solid #7e858e;
+    color: white;
+    padding-left: 4px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 15px;
+  }
+}
+/* @media screen and (max-width: 900px) and (orientation: landscape) {
+  .searchContainer {
+    margin-left: 45px;
+  }
+} */

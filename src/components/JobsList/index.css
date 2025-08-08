@@ -1,0 +1,296 @@
+.jobListCard {
+  background-color: #272727;
+  width: 750px;
+  max-width: 780px;
+  margin-bottom: 16px;
+  padding: 15px;
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.marginLeftCard {
+  margin-left: 50px;
+}
+.companyLogo {
+  height: 55px;
+  width: 50px;
+}
+
+.jobListheading {
+  color: white;
+  font-size: 17px;
+  font-family: 'Roboto';
+  margin: 0;
+}
+.jobListpara {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.headingAndRating {
+  align-self: flex-start;
+  margin-left: 10px;
+}
+.starLogo {
+  color: gold;
+  padding-top: 1px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+.topFlex {
+  display: flex;
+  flex-direction: row;
+}
+.middlePara {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.middleSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.locationAndType {
+  display: flex;
+}
+.description {
+  color: white;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+.descriptionPara {
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+  line-height: 1.6;
+}
+.link_card {
+  text-decoration: none;
+  color: inherit;
+}
+.BsBriefcaseFill {
+  margin-left: 15px;
+  margin-top: 1px;
+  margin-right: 5px;
+  color: white;
+}
+.MdLocationOn {
+  margin-top: 1px;
+  margin-right: 5px;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .jobListCard {
+    background-color: #272727;
+    width: 310px;
+    max-width: 315px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .marginLeftCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .companyLogo {
+    height: 38px;
+    width: 38px;
+  }
+
+  .jobListheading {
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    margin: 0;
+  }
+  .jobListpara {
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  .headingAndRating {
+    align-self: flex-start;
+    margin-left: 7px;
+  }
+  .starLogo {
+    color: gold;
+    padding-top: 1px;
+    margin-right: 5px;
+    font-size: 13px;
+  }
+  .topFlex {
+    display: flex;
+    flex-direction: row;
+  }
+  .middlePara {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin: 0;
+    padding-left: 2px;
+    padding-right: 7px;
+  }
+
+  .middleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .locationAndType {
+    display: flex;
+  }
+  .description {
+    color: white;
+    font-size: 13px;
+    font-family: 'Roboto';
+  }
+  .descriptionPara {
+    color: white;
+    font-size: 12px;
+    font-family: 'Roboto';
+    line-height: 1.3;
+  }
+  .MdLocationOn,
+  .BsBriefcaseFill {
+    margin-right: 0;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 2px;
+  }
+}
+
+/*----------------------------------------  IPAD  LANDSCAPE VIEW  ----------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  .jobListCard {
+    background-color: #272727;
+    width: 560px;
+    max-width: 615px;
+    margin: 0 0 16px 0;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .companyLogo {
+    height: 47px;
+    width: 45px;
+  }
+
+  .jobListheading {
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin: 0;
+  }
+  .jobListpara {
+    font-family: 'Roboto';
+    font-size: 13px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  .headingAndRating {
+    align-self: flex-start;
+    margin-left: 8px;
+  }
+  .starLogo {
+    color: gold;
+    padding-top: 1px;
+    margin-right: 5px;
+    font-size: 13px;
+  }
+  .topFlex {
+    display: flex;
+    flex-direction: row;
+  }
+  .middlePara {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 13px;
+    margin: 0;
+    padding-left: 2px;
+    padding-right: 7px;
+  }
+
+  .middleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .locationAndType {
+    display: flex;
+  }
+  .description {
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+  }
+  .descriptionPara {
+    color: white;
+    font-size: 13px;
+    font-family: 'Roboto';
+    line-height: 1.3;
+  }
+}
+
+/*ipad potrait view and mobile desktop potrait view */
+@media (min-width: 768px) and (orientation: portrait) {
+  .jobListCard {
+    background-color: #272727;
+    width: 430px;
+    max-width: 510px;
+    margin: 0 0 16px 0;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .marginLeftCard {
+    margin-left: 15px;
+    /* margin-left: 0px; */
+  }
+  .companyLogo {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* mobile landscape (rortate screen) noDesktop view */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .jobListCard {
+    background-color: #272727;
+    width: 400px;
+    max-width: 450px;
+    margin: 0 0 16px 0;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .marginLeftCard {
+    margin-left: 25px;
+  }
+}
+
+/* mobile landscape (rortate screen) desktopView */
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape) {
+  .jobListCard {
+    background-color: #272727;
+    width: 500px;
+    max-width: 530px;
+    margin: 0 0 16px 0;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .marginLeftCard {
+    margin-left: 65px;
+  }
+}

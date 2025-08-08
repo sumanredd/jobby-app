@@ -1,0 +1,465 @@
+.jobListCardIndividual {
+  background-color: #272727;
+  width: 1000px;
+  margin-bottom: 5px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.IndividualFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.companyLogoIndividual {
+  height: 60px;
+  width: 60px;
+}
+
+.jobListheadingIndividual {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  margin: 0;
+}
+.jobListparaIndividual {
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.headingAndRatingIndividual {
+  align-self: flex-start;
+  margin-left: 10px;
+}
+.starLogoIndividual {
+  color: gold;
+  padding-top: 1px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+.topFlexIndividual {
+  display: flex;
+  flex-direction: row;
+}
+.middleParaIndividual {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 18px;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.middleSectionIndividual {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.locationAndTypeIndividual {
+  display: flex;
+  align-items: center;
+}
+.descriptionIndividual {
+  color: white;
+  font-size: 22px;
+  font-family: 'Roboto';
+}
+.VisitStyle {
+  color: #6366f1;
+  font-size: 20px;
+  padding-right: 5px;
+}
+.descriptionParaIndividual {
+  color: white;
+  font-size: 19px;
+  font-family: 'Roboto';
+  line-height: 1.6;
+}
+.link_cardIndividual {
+  text-decoration: none;
+  color: inherit;
+}
+
+.skillHeadingIndividual {
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto';
+  padding-top: 10px;
+}
+.skillsUl {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 0;
+  padding-left: 0;
+  gap: 15px;
+}
+.skillsLi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  width: 150px;
+}
+.skillsPara {
+  color: white;
+  font-size: 15px;
+  font-family: 'Roboto';
+  padding-right: 10px;
+}
+.skillsImg {
+  height: 60px;
+  width: 55px;
+  margin-right: 7px;
+}
+.lifeAtCompanyHeading {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 20px;
+  padding-top: 20px;
+}
+.lifeAtCompanyPara {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 19px;
+  padding-right: 35px;
+  line-height: 1.6;
+}
+.lifeAtCompanySection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.lifeAtCompanyImg {
+  margin-top: 19px;
+  height: 155px;
+}
+
+.jobListCardSimilar {
+  background-color: #272727;
+  width: 280px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.companyLogoSimilar {
+  height: 48px;
+  width: 44px;
+}
+
+.SimilarSectionFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.similarHeading {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 30px;
+  padding-top: 20px;
+}
+.jobListheadingSimilar {
+  color: white;
+  font-size: 13px;
+  font-family: 'Roboto';
+  margin: 0;
+}
+.jobListparaSimilar {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.headingAndRatingSimilar {
+  align-self: flex-start;
+  margin-left: 7px;
+}
+.starLogoSimilar {
+  color: gold;
+  padding-top: 1px;
+  margin-right: 5px;
+  font-size: 16px;
+}
+.topFlexSimilar {
+  display: flex;
+  flex-direction: row;
+}
+.similarUl {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.descriptionSimilar {
+  color: white;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+.descriptionParaSimilar {
+  color: white;
+  font-size: 10px;
+  font-family: 'Roboto';
+  line-height: 1.3;
+}
+.middleParaSimilar {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 17px;
+  margin: 0;
+  padding-right: 10px;
+}
+
+.middleSectionSimilar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.locationAndTypeSimilar {
+  display: flex;
+  align-items: center;
+}
+.BsBriefcaseFill {
+  margin-left: 15px;
+  margin-top: 1px;
+  margin-right: 5px;
+  font-size: 18px;
+  color: white;
+}
+.MdLocationOn {
+  font-size: 18px;
+  margin-top: 1px;
+  margin-right: 5px;
+  color: white;
+}
+.IndividialLoading {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .jobListCardIndividual {
+    background-color: #272727;
+    width: 340px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .IndividualFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .middleParaIndividual {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 14px;
+    margin: 0;
+    padding-right: 10px;
+  }
+  .descriptionIndividual {
+    color: white;
+    font-size: 17px;
+    font-family: 'Roboto';
+  }
+  .VisitStyle {
+    color: #6366f1;
+    font-size: 18px;
+    padding-right: 5px;
+  }
+  .descriptionParaIndividual {
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    line-height: 1.6;
+  }
+  .skillHeadingIndividual {
+    color: white;
+    font-size: 18px;
+    font-family: 'Roboto';
+    padding-top: 10px;
+  }
+  .skillsUl {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .skillsLi {
+    display: flex;
+    align-items: center;
+    width: 140px;
+    margin: 5px 0;
+  }
+  .skillsPara {
+    color: white;
+    font-size: 13px;
+    font-family: 'Roboto';
+    padding-right: 15px;
+  }
+  .skillsImg {
+    height: 40px;
+    width: 45px;
+    margin-right: 4px;
+  }
+  .lifeAtCompanyHeading {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  .lifeAtCompanyPara {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0;
+    order: 1;
+  }
+  .lifeAtCompanySection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .lifeAtCompanyImg {
+    margin-top: 19px;
+    height: 130px;
+    width: 300px;
+  }
+  .similarUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .jobListCardSimilar {
+    background-color: #272727;
+    width: 280px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+/* OVERRIDING TOP CSS (MEANS NO MEDIA CSS) SO THERE IS NO CHANGE IN IPAD VIEW LANDSCAPE VIEW */
+/* @media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape){
+
+} */
+
+/*ipad potrait view and mobile desktop potrait view */
+@media (min-width: 768px) and (orientation: portrait) {
+  .jobListCardIndividual {
+    background-color: #272727;
+    width: 750px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .jobListCardSimilar {
+    background-color: #272727;
+    width: 210px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .middleParaSimilar {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin: 0;
+    padding-right: 7px;
+  }
+}
+
+/* mobile landscape (rortate screen) noDesktop view */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .jobListCardIndividual {
+    background-color: #272727;
+    width: 680px;
+    max-width: 700px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .lifeAtCompanyPara {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0;
+  }
+  .jobListCardSimilar {
+    background-color: #272727;
+    width: 210px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .middleParaSimilar {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 11px;
+    margin: 0;
+    padding-right: 5px;
+  }
+  .similarHeading {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+  }
+}
+
+/* mobile landscape (rortate screen) desktopView */
+@media screen and (min-width: 901px) and (max-width: 1200px) and (orientation: landscape) {
+  .jobListCardIndividual {
+    background-color: #272727;
+    width: 910px;
+    max-width: 920px;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .jobListCardSimilar {
+    background-color: #272727;
+    width: 210px;
+
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .similarHeading {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+  }
+  .middleParaSimilar {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 11px;
+    margin: 0;
+    padding-right: 5px;
+  }
+}
