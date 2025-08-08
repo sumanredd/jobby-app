@@ -35,7 +35,7 @@ body {
 .labelText {
   color: white;
   font-size: 12px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 .loginInput {
   margin-top: 8px;
@@ -60,22 +60,19 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   cursor: pointer;
   margin-top: 15px;
-
 }
 .loginBtn:hover {
   background-color: #423bbc;
 }
 .errorMsg {
   color: red;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 15px;
   margin-bottom: 15px;
 }
-
-
 
 @media screen and (max-width: 600px) {
   .card {
