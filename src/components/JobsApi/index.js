@@ -24,6 +24,17 @@ class JobApi extends Component {
     this.getJobData()
   }
 
+  
+  componentDidUpdate(prevProps) {
+    const {searchRadio, searchCheckBox} = this.props
+    if (
+      prevProps.searchRadio !== searchRadio ||
+      prevProps.searchCheckBox !== searchCheckBox
+    ) {
+      this.setState({currentPage: 1})
+    }
+  }
+
   getJobData = async () => {
     const url = 'https://apis.ccbp.in/jobs'
     const getCookie = Cookies.get('jwt_token')
@@ -83,7 +94,9 @@ class JobApi extends Component {
       </button>
     )
 
-    // Show first page always
+  
+    if (totalPages <= 1) return null
+
     if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) pages.push(createPageButton(i))
     } else {
