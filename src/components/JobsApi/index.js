@@ -1,19 +1,28 @@
+/* eslint-disable react/sort-comp, camelcase, no-nested-ternary */
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import JobList from '../JobsList'
 import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import {FaSearch} from 'react-icons/fa'
+import JobList from '../JobsList'
+import './index.css'
 
 class JobApi extends Component {
-  state = {jobListData: [], FailureImgSrc: '', isLoading: true, search: ''}
+  state = {
+    jobListData: [],
+    FailureImgSrc: '',
+    isLoading: true,
+    search: '',
+    currentPage: 1,
+    jobsPerPage: 5,
+  }
+
+  searchValue = null
 
   componentDidMount() {
     window.scrollTo(0, 0)
     this.getJobData()
   }
-
-  searchValue = null
 
   getJobData = async () => {
     const url = 'https://apis.ccbp.in/jobs'
@@ -27,15 +36,15 @@ class JobApi extends Component {
     const response = await fetch(url, options)
     const data = await response.json()
     if (response.ok) {
-      const updatedData = data.jobs.map(each_jobList => ({
-        companyLogoUrl: each_jobList.company_logo_url,
-        employmentType: each_jobList.employment_type,
-        id: each_jobList.id,
-        jobDescription: each_jobList.job_description,
-        packagePerAnnum: each_jobList.package_per_annum,
-        location: each_jobList.location,
-        rating: each_jobList.rating,
-        title: each_jobList.title,
+      const updatedData = data.jobs.map(eachJobList => ({
+        companyLogoUrl: eachJobList.company_logo_url,
+        employmentType: eachJobList.employment_type,
+        id: eachJobList.id,
+        jobDescription: eachJobList.job_description,
+        packagePerAnnum: eachJobList.package_per_annum,
+        location: eachJobList.location,
+        rating: eachJobList.rating,
+        title: eachJobList.title,
       }))
       this.setState({jobListData: updatedData, isLoading: false})
     } else {
@@ -52,14 +61,84 @@ class JobApi extends Component {
   }
 
   onSearchBtn = () => {
-    this.setState({search: this.searchValue})
+    this.setState({search: this.searchValue, currentPage: 1})
+  }
+
+  changePage = pageNum => {
+    this.setState({currentPage: pageNum})
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }
+
+  renderPagination = totalPages => {
+    const {currentPage} = this.state
+    const pages = []
+
+    const createPageButton = num => (
+      <button
+        key={num}
+        onClick={() => this.changePage(num)}
+        className={`paginationBtn ${currentPage === num ? 'activePage' : ''}`}
+      >
+        {num}
+      </button>
+    )
+
+    // Show first page always
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(createPageButton(i))
+    } else {
+      pages.push(createPageButton(1))
+
+      if (currentPage > 3) pages.push(<span key='start-dots'>...</span>)
+
+      const start = Math.max(2, currentPage - 1)
+      const end = Math.min(totalPages - 1, currentPage + 1)
+
+      for (let i = start; i <= end; i++) pages.push(createPageButton(i))
+
+      if (currentPage < totalPages - 2)
+        pages.push(<span key='end-dots'>...</span>)
+
+      pages.push(createPageButton(totalPages))
+    }
+
+    return (
+      <div className='paginationContainer'>
+        <button
+          onClick={() => this.changePage(Math.max(currentPage - 1, 1))}
+          disabled={currentPage === 1}
+          className='arrowBtn'
+        >
+          &lt;
+        </button>
+
+        {pages}
+
+        <button
+          onClick={() => this.changePage(Math.min(currentPage + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          className='arrowBtn'
+        >
+          &gt;
+        </button>
+      </div>
+    )
   }
 
   renderJobList = () => {
     const {searchRadio, searchCheckBox} = this.props
-    const {jobListData, isLoading, search, FailureImgSrc} = this.state
+    const {
+      jobListData,
+      isLoading,
+      search,
+      FailureImgSrc,
+      currentPage,
+      jobsPerPage,
+    } = this.state
+
     const radioCheck = searchRadio !== ''
     const checkBox = searchCheckBox.length !== 0
+
     const filteredData = checkBox
       ? jobListData.filter(each => searchCheckBox.includes(each.employmentType))
       : jobListData.filter(each =>
@@ -68,11 +147,13 @@ class JobApi extends Component {
             .replace(/\s+/g, '')
             .includes(search.trim().toLowerCase().replace(/\s+/g, '')),
         )
+
     const finalData = radioCheck
       ? filteredData.filter(
-          each_item => searchRadio <= parseInt(each_item.packagePerAnnum),
+          eachItem => searchRadio <= parseInt(eachItem.packagePerAnnum),
         )
       : filteredData
+
     const SearchFinalData =
       search !== ''
         ? finalData.filter(each =>
@@ -82,8 +163,14 @@ class JobApi extends Component {
               .includes(search.trim().toLowerCase().replace(/\s+/g, '')),
           )
         : finalData
+
     const NoJobsFound = SearchFinalData.length === 0
-    // const failure = FailureImgSrc !== ''
+
+    const totalPages = Math.ceil(SearchFinalData.length / jobsPerPage)
+    const indexOfLastJob = currentPage * jobsPerPage
+    const indexOfFirstJob = indexOfLastJob - jobsPerPage
+    const currentJobs = SearchFinalData.slice(indexOfFirstJob, indexOfLastJob)
+
     return (
       <>
         <div className='searchContainer'>
@@ -97,6 +184,7 @@ class JobApi extends Component {
             <FaSearch className='searchicon' />
           </button>
         </div>
+
         {isLoading ? (
           <div
             style={{
@@ -121,11 +209,14 @@ class JobApi extends Component {
             </p>
           </div>
         ) : (
-          <ul className='mobileUl'>
-            {SearchFinalData.map(each => (
-              <JobList jobData={each} key={each.id} />
-            ))}
-          </ul>
+          <>
+            <ul className='mobileUl'>
+              {currentJobs.map(each => (
+                <JobList jobData={each} key={each.id} />
+              ))}
+            </ul>
+            {this.renderPagination(totalPages)}
+          </>
         )}
       </>
     )
@@ -135,4 +226,5 @@ class JobApi extends Component {
     return this.renderJobList()
   }
 }
+
 export default JobApi

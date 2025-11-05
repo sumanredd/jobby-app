@@ -1,13 +1,14 @@
-import { Component } from "react";
-import "./index.css";
-import { MdLocationOn } from "react-icons/md";
-import { BsBriefcaseFill } from "react-icons/bs";
-import { IoStar } from "react-icons/io5";
-import { Link } from "react-router-dom";
+/* eslint-disable react/sort-comp, camelcase, no-nested-ternary */
+import {Component} from 'react'
+import './index.css'
+import {MdLocationOn} from 'react-icons/md'
+import {BsBriefcaseFill} from 'react-icons/bs'
+import {IoStar} from 'react-icons/io5'
+import {Link} from 'react-router-dom'
 
 class JobList extends Component {
   render() {
-    const { jobData } = this.props;
+    const {jobData} = this.props
     const {
       companyLogoUrl,
       employmentType,
@@ -17,17 +18,17 @@ class JobList extends Component {
       rating,
       title,
       location,
-    } = jobData;
+    } = jobData
     return (
-      <div className="marginLeftCard">
-        <Link className="link_card" to={`/jobs/${id}`}>
-          <li className="jobListCard">
-            <div className="topFlex">
-              <img src={companyLogoUrl} className="companyLogo" />
-              <div className="headingAndRating">
-                <h1 className="jobListheading">{title}</h1>
-                <p className="jobListpara">
-                  <span className="starLogo">
+      <div className='marginLeftCard'>
+        <Link className='link_card' to={`/jobs/${id}`}>
+          <li className='jobListCard'>
+            <div className='topFlex'>
+              <img src={companyLogoUrl} className='companyLogo' />
+              <div className='headingAndRating'>
+                <h1 className='jobListheading'>{title}</h1>
+                <p className='jobListpara'>
+                  <span className='starLogo'>
                     <IoStar />
                   </span>
                   {rating}
@@ -35,29 +36,29 @@ class JobList extends Component {
               </div>
             </div>
 
-            <div className="middleSection">
-              <div className="locationAndType">
-                <MdLocationOn className="MdLocationOn" />
-                <p className="middlePara">{location}</p>
-                <BsBriefcaseFill className="BsBriefcaseFill" />
-                <p className="middlePara">{employmentType}</p>
+            <div className='middleSection'>
+              <div className='locationAndType'>
+                <MdLocationOn className='MdLocationOn' />
+                <p className='middlePara'>{location}</p>
+                <BsBriefcaseFill className='BsBriefcaseFill' />
+                <p className='middlePara'>{employmentType}</p>
               </div>
-              <p className="middlePara">{packagePerAnnum}</p>
+              <p className='middlePara'>{packagePerAnnum}</p>
             </div>
             <hr
               style={{
-                width: "100%",
+                width: '100%',
                 marginLeft: 0,
-                border: "1px solid #7e858e",
+                border: '1px solid #7e858e',
               }}
             />
-            <h1 className="description">Description</h1>
-            <p className="descriptionPara">{jobDescription}</p>
+            <h1 className='description'>Description</h1>
+            <p className='descriptionPara'>{jobDescription}</p>
           </li>
         </Link>
       </div>
-    );
+    )
   }
 }
 
-export default JobList;
+export default JobList
